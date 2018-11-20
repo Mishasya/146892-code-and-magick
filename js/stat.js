@@ -12,12 +12,12 @@ var WIDTH_BAR = 40;
 var FONT_GAP = 16;
 var MAX_HEIGHT_BAR = 150;
 
-var renderCloud = function(ctx, x, y, color) {
+var renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
-}
+};
 
-var getMaxElement = function(arr) {
+var getMaxElement = function (arr) {
   var maxElement = arr[0];
 
   for (var i = 1; i < arr.length; i++) {
@@ -27,7 +27,7 @@ var getMaxElement = function(arr) {
   }
 };
 
-window.renderStatistics = function(ctx, players, times) {
+window.renderStatistics = function (ctx, players, times) {
   renderCloud(ctx, CLOUD_X + SHIFT_XY, CLOUD_Y + SHIFT_XY, 'rgba(0, 0, 0, 0.7)');
   renderCloud(ctx, CLOUD_X, CLOUD_Y, '#fff');
 
@@ -50,7 +50,7 @@ window.renderStatistics = function(ctx, players, times) {
   }
 
 
-  /*ctx.fillRect(CLOUD_X + INDENT + (GAP + WIDTH_BAR) * playerIndex, INDENT + FONT_GAP + GAP, WIDTH_BAR, MAX_HEIGHT_BAR);
+  /* ctx.fillRect(CLOUD_X + INDENT + (GAP + WIDTH_BAR) * playerIndex, INDENT + FONT_GAP + GAP, WIDTH_BAR, MAX_HEIGHT_BAR);
   ctx.fillText('Вы', CLOUD_X + INDENT + (GAP + WIDTH_BAR) * playerIndex, BOTTOM_INDENT);
 
   ctx.fillRect(CLOUD_X + INDENT + (GAP + WIDTH_BAR) * playerIndex, INDENT + FONT_GAP + GAP, WIDTH_BAR, MAX_HEIGHT_BAR);
@@ -61,4 +61,4 @@ window.renderStatistics = function(ctx, players, times) {
 
   ctx.fillRect(CLOUD_X + INDENT + (GAP + WIDTH_BAR) * playerIndex, INDENT + FONT_GAP + GAP, WIDTH_BAR, MAX_HEIGHT_BAR);
   ctx.fillText('Игорь', CLOUD_X + INDENT + (GAP + WIDTH_BAR) * playerIndex, BOTTOM_INDENT);*/
-}
+};
